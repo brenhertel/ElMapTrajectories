@@ -1,0 +1,3 @@
+[submodule "scripts/elastic-maps"]
+	path = scripts/elastic-maps
+	url = https://github.com/brenhertel/elastic-maps
