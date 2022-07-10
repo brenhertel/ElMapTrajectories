@@ -10,6 +10,23 @@ import numpy as np
 from utils import *
 from downsampling import *
 
+
+#call this function to calculate the elastic map reproduction, with specified downsampling, weighting, constraints, and tuning parameters
+'''
+data (required): demonstrations (what to model), demonstrations should be stacked such that they are n_pts x n_dims (multiple demonstrations should use the zip_demos function)
+n (optional): number of points in reproduction (default=100)
+weighting (optional): weighting method. Options are 'uniform' (default), 'curvature', 'jerk', or 'custom'
+downsampling (optional): downsampling method. Options are 'naive' (default), 'distance-based', 'douglas-peucker', or 'custom'
+inds (optional): indices (in the reproduction) where constraints should be placed (default is no constraints)
+consts (optional): spatial positions of corresponding constraints (default is no constraints)
+lmbda (optional): lambda parameter, affects smoothness by weighting springs between nodes (see paper for details) (default=0.1)
+mu (optional): mu parameter, affects smoothness by weighting curvature of nodes (see paper for details) (default=0.01)
+given_weights (optional): custom weights, only use if 'custom' option for weighting
+given_downsample (optional): custom downsample, only use if 'custom' option for downsampling 
+
+Note: if using multiple demonstrations, the curvature/jerk weighting here is not recommended. Calculate outside this function and pass in as custom weights
+'''
+
 def perform_elmap(data, n=100, weighting='uniform', downsampling='naive', inds=[], consts=[], lmbda=0.1, mu=0.01, given_weights=[], given_downsample=[]):
     #calculate weights if needed
     if weighting == 'uniform':
