@@ -20,6 +20,25 @@ def get_lasa_trajn(shape_name, n=1):
     hf.close()
     return [x_data, y_data]
   
+#read data from a real-world demo taken in the PeARL Lab
+def read_3D_h5(fname):
+    #ask user for the file which the playback is for
+    #filename = raw_input('Enter the filename of the .h5 demo: ')
+    #open the file
+    hf = h5py.File(fname, 'r')
+    #navigate to necessary data and store in numpy arrays
+    demo = hf.get('demo1')
+    tf_info = demo.get('tf_info')
+    pos_info = tf_info.get('pos_rot_data')
+    pos_data = np.array(pos_info)
+    
+    x = pos_data[0, :]
+    y = pos_data[1, :]
+    z = pos_data[2, :]
+    #close out file
+    hf.close()
+    return [x, y, z]
+    
 #calculate curvature of points to use as weights for elastic map  
 def calc_curv_weights(data):
     nodeWeights = [0]
