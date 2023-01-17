@@ -20,4 +20,4 @@ If you use the code present in this repository, please cite the following paper:
   organization={IEEE}
 }
 ```
-This implementation of elastic maps would not have been possible without the helpful code provided at https://github.com/j-bac/elastic-maps and https://github.com/Mirkes/ElMap
+This implementation of elastic maps would not have been possible without the helpful code provided at https://github.com/j-bac/elastic-maps and https://github.com/Mirkes/ElMap.
