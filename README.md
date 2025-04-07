@@ -15,7 +15,8 @@ If you use the code present in this repository, please cite the following paper:
 @inproceedings{hertel2022ElMap,
   title={Robot Learning from Demonstration Using Elastic Maps},
   author={Hertel, Brendan and Pelland, Matthew and S. Reza Ahmadzadeh},
-  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  booktitle={2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={7407--7413},
   year={2022},
   organization={IEEE}
 }
