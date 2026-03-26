@@ -1,5 +1,7 @@
 # ElMapTrajectories
 
+NOTE: Updated version here: https://github.com/brenhertel/ElasticMaps
+
 Implementation of Elastic Maps for trajectory reproduction use.
 
 Corresponding paper can be found for free [here](https://arxiv.org/abs/2208.02207), please read for method details. Accompanying video available [here](https://youtu.be/rZgN9Pkw0tg).
